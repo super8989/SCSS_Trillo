@@ -1,0 +1,14 @@
+{
+	"name": "trillo",
+	"version": "1.0.0",
+	"description": "Advanced CSS Course",
+	"main": "index.js",
+	"scripts": {
+		"compile:sass": "node-sass sass/main.css css/style.css"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"node-sass": "^4.13.1"
+	}
+}
