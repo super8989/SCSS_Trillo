@@ -342,6 +342,11 @@ body {
   position: relative;
 }
 
+.user-nav__icon-box:hover .user-nav__notification {
+  -webkit-animation: bounce 1s infinite;
+          animation: bounce 1s infinite;
+}
+
 .user-nav__icon {
   height: 2.25rem;
   width: 2.25rem;
@@ -553,6 +558,11 @@ body {
   fill: var(--color-primary);
 }
 
+.overview__icon-star:hover, .overview__icon-location:hover {
+  -webkit-transform: translateY(-0.2rem);
+          transform: translateY(-0.2rem);
+}
+
 .overview__location {
   font-size: 1.2rem;
   display: -webkit-box;
@@ -693,6 +703,36 @@ body {
   }
 }
 
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
 .paragraph:not(:last-of-type) {
   margin-bottom: 2rem;
 }
@@ -762,6 +802,11 @@ body {
 
 .recommend__photo:not(:last-child) {
   margin-right: -2rem;
+}
+
+.recommend__photo:hover {
+  -webkit-animation: bounce 1s infinite;
+          animation: bounce 1s infinite;
 }
 
 .review {

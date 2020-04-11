@@ -93,6 +93,10 @@
 		position: relative;
 	}
 
+	&__icon-box:hover &__notification {
+		animation: bounce 1s infinite;
+	}
+
 	&__icon {
 		height: 2.25rem;
 		width: 2.25rem;
@@ -266,6 +270,10 @@
 		width: 1.75rem;
 		height: 1.75rem;
 		fill: var(--color-primary);
+
+		&:hover {
+			transform: translateY(-0.2rem);
+		}
 	}
 
 	&__location {
@@ -347,6 +355,8 @@
 	}
 }
 
+//////////////////
+// Animation
 @keyframes pulsate {
 	0% {
 		transform: scale(1);
@@ -361,6 +371,20 @@
 	100% {
 		transform: scale(1);
 		box-shadow: none;
+	}
+}
+
+@keyframes bounce {
+	0% {
+		transform: translateY(0);
+	}
+
+	50% {
+		transform: translateY(-1rem);
+	}
+
+	100% {
+		transform: translateY(0);
 	}
 }
 
@@ -431,6 +455,10 @@
 
 		&:not(:last-child) {
 			margin-right: -2rem;
+		}
+
+		&:hover {
+			animation: bounce 1s infinite;
 		}
 	}
 }
